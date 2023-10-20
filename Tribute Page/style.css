@@ -3,3 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    background-color: orangered;
+    color: white;
+    width: 200px;
+    height: 200px;
+    animation: anim 1s ease-in-out 0ms infinite;
+    line-height: 200px;
+    text-align: center;
+}
+
+@keyframes anim {
+    20% {
+        background-color: blue;
+    }
+    100% {
+        background-color: orangered;
+        scale: 5;
+    }
+    
+}
+
