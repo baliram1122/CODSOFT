@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <main>
         <section id="hero">
             <div id="heading-section">
                 <h1 id="static-text">Elon musk is</h1><br>
                 <div id="dynamic-text">
-                <span><h1>Engineer</h1></span> 
-                <span><h1>Innovator</h1></span> 
-                <span><h1>Visionary</h1></span> 
+                    <span>
+                        <h1>Engineer</h1>
+                    </span>
+                    <span>
+                        <h1>Innovator</h1>
+                    </span>
+                    <span>
+                        <h1>Visionary</h1>
+                    </span>
                 </div>
             </div>
-            <div id="img-section"></div>
+            <div id="img-section">
+                <img src="Assets/elon-header1.png" id="hero-img" alt="">
+                <div class="blob"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
+                        width="100%" id="blobSvg">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color: rgb(255, 44, 69);"></stop>
+                                <stop offset="100%" style="stop-color: rgb(131, 1, 58);"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path id="blob" fill="url(#gradient)">
+                            <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                                values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+                            </animate>
+                        </path>
+                    </svg></div>
+            </div>
         </section>
 
-        <section id="timeline">
-            <div id="line">
-                <span class="year-left">bla bla bla</span>
-                <span class="event-right">bla bla bla</span>
-                <span class="event-left">bla bla bla</span>
-                <span class="year-right">bla bla bla</span>
-                <span class="year-left">bla bla bla</span>
-                <span class="event-right">bla bla bla</span>
-                <span class="event-left">bla bla bla</span>
-                <span class="year-right">bla bla bla</span>
-            </div>
+        <section id="timeline-container">
+            <h2 class="timeline-heading">Timeline</h2>
+            <section id="timeline">
+                <div id="line">
+                    <p class="default-style year-left ">June 28, 1971</p>
+                    <p class="default-style event-right mt">Born in Pretoria, South Africa's administrative capital</p>
+                    <p class="default-style event-left mt2 mt22">Writes first video game called Blastar; sells for $500.
+                    </p>
+                    <p class="default-style year-right mt2">1983</p>
+
+                    <p class="default-style year-left mt1">1995-1991</p>
+                    <p class="default-style event-right mt1">Attends Queen's University and later transfers to the
+                        University of Pennsylvania, earning a BS in Economics (Wharton) and a BA in physics.</p>
+                    <p class="default-style year-right mt3">1995</p>
+                    <p class="default-style event-left mt3">Moves to Silicon Valley; defers graduate program in applied
+                        physics and materials science at Stanford University to join the Internet boom</p>
+
+                    <p class="default-style year-left mt5">1999</p>
+                    <p class="default-style event-right mt5">Sells Zip2 to Compaq, the personal computer company, for
+                        $307 million, of which $22 million went to Musk. Then forms X.com, which in 2000 morphs into
+                        PayPal</p>
+                    <p class="default-style event-left mt6">eBay acquires PayPal for $1.5 billion in stock, of which
+                        $165 million goes to Musk</p>
+                    <p class="default-style year-right mt6">July 2002</p>
+
+                    <p class="default-style year-left mt7">May 2002</p>
+                    <p class="default-style event-right mt7">Founds SpaceX to design, manufacture and launche advanced
+                        rockets and spacecraft.</p>
+                    <p class="default-style event-left mt8">Invests several millions into Tesla Motors</p>
+                    <p class="default-style year-right mt8">2004</p>
+
+                    <p class="default-style year-left mt9">2007</p>
+                    <p class="default-style event-right mt9">SpaceX wins $1.6 billion contract to bring cargo to the
+                        International Space Station</p>
+                    <p class="default-style event-left mt10">Becomes Tesla’s CEO</p>
+                    <p class="default-style year-right mt10">October 2008</p>
+
+                    <p class="default-style year-left mt11">June 29, 2010</p>
+                    <p class="default-style event-right mt11">Tesla IPO</p>
+                    <p class="default-style event-left mt12">SpaceX becomes the first commercial vehicle to deliver a
+                        load of supplies to the International Space Station.</p>
+                    <p class="default-style year-right mt12">May 2012</p>
+
+                    <p class="default-style year-left mt13">August 2013</p>
+                    <p class="default-style event-right mt13">Releases sketch and concept of the Hyperloop</p>
+                    <p class="default-style event-left mt14">SpaceX successfully launches 2 astronauts into space on the
+                        Crew Dragon in order to dock with the ISS.</p>
+                    <p class="default-style year-right mt14">May 30, 2020</p>
+
+                    <p class="default-style year-left mt15">January 6, 2023</p>
+                    <p class="default-style event-right mt15">broke a world record for the largest loss of wealth at
+                        approximately $182 billion</p>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -40,4 +107,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

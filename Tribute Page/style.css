@@ -72,94 +72,157 @@ body {
 
 #img-section {
     position: relative;
+    max-width: 500px;
+    width: 100%;
+    height: 500px;
+}
+
+.blob {
+    position: absolute;
+    z-index: -1; 
+    top: 20px;
+    left: 5px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 300px;
+}
+
+#hero-img {
+    position: relative;
+    z-index: 1; 
     max-width: 400px;
     width: 100%;
     height: 400px;
-    background: url("Assets/elon-header1.png"); 
-    background-size: 100%;
 }
 
-#img-section:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Assets/elon-header1.png");
-    background-size: 100%;
-    opacity: .5;
-    mix-blend-mode: hard-light;
+#timeline-container {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-#img-section:hover:before {
-    animation: animate 0.8s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        background-position: 0 0;
-        filter: hue-rotate(0deg);
-    }
-
-    10% {
-        background-position: 5px 0;
-        filter: hue-rotate(5deg);
-    }
-
-    30% {
-        background-position: 5px 0;
-        filter: hue-rotate(5deg);
-    }
-
-    40% {
-        background-position: 5px 0;
-        filter: hue-rotate(5deg);
-    }
-
-    50% {
-        background-position: -15px 0;
-        filter: hue-rotate(-15deg);
-    }
-
-    60% {
-        background-position: -20px 0;
-        filter: hue-rotate(20deg);
-    }
-
-    70% {
-        background-position: 0 -20px;
-        filter: hue-rotate(0deg);
-    }
-
-    80% {
-        background-position: -10px -10px;
-        filter: hue-rotate(-10deg);
-    }
-
-    81% {
-        background-position: 0 0;
-        filter: hue-rotate(0deg);
-    }
-
-    100% {
-        background-position: 0 0;
-        filter: hue-rotate(0deg);
-    }
+.timeline-heading {
+    font-size: 5vw;
 }
 
 #timeline {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+    letter-spacing: 2px;
 }
 
 #line {
     background-color: white;
-    height: 1000px;
-    width: 5px;
+    height: 1500px;
+    width: 3px;
+    position: relative;
 }
 
+.mt1 {
+    margin-top: 200px;
+}
+
+.mt2 {
+    margin-top: 100px;
+}
+
+.mt3 {
+    margin-top: 300px;
+}
+
+.mt5 {
+    margin-top: 400px;
+}
+
+.mt6 {
+    margin-top: 500px;
+}
+
+.mt7 {
+    margin-top: 600px;
+}
+
+.mt8 {
+    margin-top: 700px;
+}
+
+.mt9 {
+    margin-top: 800px;
+}
+
+.mt10 {
+    margin-top: 900px;
+}
+
+.mt11 {
+    margin-top: 1000px;
+}
+
+.mt12 {
+    margin-top: 1100px;
+}
+.mt13 {
+    margin-top: 1200px;
+}
+.mt14 {
+    margin-top: 1300px;
+}
+.mt15 {
+    margin-top: 1400px;
+}
+
+
+
+.default-style {
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    line-height: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    transition: 0.5s linear;
+    padding: 5px;
+}
+
+.default-style:hover {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.145);
+    box-shadow: 0 0 10px 1px #ff2c4538;
+    backdrop-filter: blur(15px);
+}
+
+.year-left, .event-left {
+    top: 10px;
+    right: 15px;   
+    text-align: right;
+}
+
+.event-right, .year-right {
+    top: 10px;
+    left: 15px;
+    text-align: left;
+} 
+
+.year-left::after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    height: 10px;
+    width: 10px;
+    background-color: dodgerblue;
+    border-radius: 100%;
+}
+
+.year-right::after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    height: 10px;
+    width: 10px;
+    background-color: #ff2c45;
+    border-radius: 100%;
+}
 
 
 
@@ -178,7 +241,60 @@ body {
         padding: 3px;    
     }
 
+    .default-style {
+        font-size: 10px;
+        line-height: 1.2;
+        width: 200px;
+    }
+
+    .mt1 {
+        margin-top: 170px;
+    }
+
+    .mt5 {
+        margin-top: 385px;
+    }
 }
+
+
+@media screen and (max-width: 400px) {
+    .default-style {
+        font-size: 8px;
+        width: 150px;
+    }
+
+    .mt1 {
+        margin-top: 200px;
+    }
+
+    .mt5 {
+        margin-top: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
