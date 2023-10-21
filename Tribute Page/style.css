@@ -4,31 +4,183 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'spaceCrusaders';
+    src: url(Assets/SpaceCrusaders-x3DP0.ttf);
+}  
+
 body {
+    background-color: black;
+    color: white; /*dont forget to rm this */
+    font-family: 'spaceCrusaders', helvetica;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+#hero h1 {
+    font-size: 5vw;
+    letter-spacing: 1px;
+}
+
+
+#heading-section #dynamic-text {
+    margin: 0;
+    overflow: hidden;
+}
+
+#heading-section #dynamic-text span {
+    font-size: 40px;
+    color:#ff2c45;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 5vw;
+    display: none;
+}
+
+#heading-section #dynamic-text span.text-in {
+    display: block;
+    animation: textIn .5s ease;
+}
+
+#heading-section #dynamic-text span.text-out {
+    animation: textOut .5s ease;
+}
+
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+
+	}
+}
+
+
+#img-section {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    background: url("Assets/elon-header1.png"); 
+    background-size: 100%;
+}
+
+#img-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Assets/elon-header1.png");
+    background-size: 100%;
+    opacity: .5;
+    mix-blend-mode: hard-light;
+}
+
+#img-section:hover:before {
+    animation: animate 0.8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+
+    10% {
+        background-position: 5px 0;
+        filter: hue-rotate(5deg);
+    }
+
+    30% {
+        background-position: 5px 0;
+        filter: hue-rotate(5deg);
+    }
+
+    40% {
+        background-position: 5px 0;
+        filter: hue-rotate(5deg);
+    }
+
+    50% {
+        background-position: -15px 0;
+        filter: hue-rotate(-15deg);
+    }
+
+    60% {
+        background-position: -20px 0;
+        filter: hue-rotate(20deg);
+    }
+
+    70% {
+        background-position: 0 -20px;
+        filter: hue-rotate(0deg);
+    }
+
+    80% {
+        background-position: -10px -10px;
+        filter: hue-rotate(-10deg);
+    }
+
+    81% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+}
+
+#timeline {
+    margin-top: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-h1 {
-    background-color: orangered;
-    color: white;
-    width: 200px;
-    height: 200px;
-    animation: anim 1s ease-in-out 0ms infinite;
-    line-height: 200px;
-    text-align: center;
+#line {
+    background-color: white;
+    height: 1000px;
+    width: 5px;
 }
 
-@keyframes anim {
-    20% {
-        background-color: blue;
+
+
+
+@media screen and (max-width: 769px) {
+    #hero {
+        flex-direction: column-reverse;
+        gap: 30px;
     }
-    100% {
-        background-color: orangered;
-        scale: 5;
+
+    #hero h1 {
+        font-size: 8vw;
+        text-align: center;
     }
-    
+
+    #dynamic-text {
+        padding: 3px;    
+    }
+
 }
+
+
+
+
 
