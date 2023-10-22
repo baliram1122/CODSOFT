@@ -9,11 +9,35 @@
     src: url(Assets/SpaceCrusaders-x3DP0.ttf);
 }
 
+*::selection {
+    color: #ff2c45;
+}
+
 body {
     background-color: black;
     color: white;
     /*dont forget to rm this */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.5s linear;
+    transform: translateY(100px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fadeout {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.fadein {
+    opacity: 1;
 }
 
 #hero {
@@ -195,13 +219,6 @@ body {
     padding: 5px;
 }
 
-.default-style:hover {
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.145);
-    box-shadow: 0 0 10px 1px #ff2c4538;
-    backdrop-filter: blur(15px);
-}
-
 .year-left,
 .event-left {
     top: 10px;
@@ -262,14 +279,21 @@ body {
     text-align: center;
     margin: 50px 0;
 }
+
 #readMore-btn {
-   text-decoration: none;
-   color: white;
-   background-color: #ff2c45;
-   padding: 15px 20px;
-   border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border:2px solid #ff2c45;
+    padding: 15px 40px;
+    border-radius: 5px;
+    transition: .5s ease;
+    font-size: 17px;
 }
 
+#readMore-btn:hover {
+    background-color: #ff2c45;
+}
 
 @media screen and (max-width: 769px) {
     #hero {
@@ -303,6 +327,10 @@ body {
     #quote-container h1 {
         font-size: 5vw;
     }
+
+    #readMore-btn {
+        padding: 10px 20px;
+    }
 }
 
 
@@ -318,5 +346,10 @@ body {
 
     .mt5 {
         margin-top: 400px;
+    }
+
+    #readMore-btn {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }

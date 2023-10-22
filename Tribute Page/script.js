@@ -1,3 +1,26 @@
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove("show")
+        } 
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fadein')   
+        } else {
+            entry.target.classList.remove('fadein')
+        }
+    })
+})
+
+const hiddenElements = document.querySelectorAll(".hidden")
+hiddenElements.forEach((e1) => observer.observe(e1))
+
+const fadeOutElems  = document.querySelectorAll(".fadeout")
+fadeOutElems.forEach((e1) => observer.observe(e1))
+
+
 const dynamicText = document.querySelector("#dynamic-text").children,
     txtsLen = dynamicText.length
 let index = 0;
