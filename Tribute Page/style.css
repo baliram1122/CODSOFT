@@ -7,12 +7,13 @@
 @font-face {
     font-family: 'spaceCrusaders';
     src: url(Assets/SpaceCrusaders-x3DP0.ttf);
-}  
+}
 
 body {
     background-color: black;
-    color: white; /*dont forget to rm this */
-    font-family: 'spaceCrusaders', helvetica;
+    color: white;
+    /*dont forget to rm this */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #hero {
@@ -20,11 +21,12 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 90vh;
+    font-family: 'spaceCrusaders', helvetica;
 }
 
 #hero h1 {
     font-size: 5vw;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 
@@ -35,7 +37,7 @@ body {
 
 #heading-section #dynamic-text span {
     font-size: 40px;
-    color:#ff2c45;
+    color: #ff2c45;
     font-weight: 700;
     display: inline-block;
     line-height: 5vw;
@@ -51,35 +53,38 @@ body {
     animation: textOut .5s ease;
 }
 
-@keyframes textIn{
-	0%{
-		transform: translateY(100%);
-	}
-	100%{
-		transform: translateY(0%);
-	}
-}
-@keyframes textOut{
-	0%{
-		transform: translateY(0%);
-	}
-	100%{
-		transform: translateY(-100%);
+@keyframes textIn {
+    0% {
+        transform: translateY(100%);
+    }
 
-	}
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes textOut {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+
+    }
 }
 
 
 #img-section {
     position: relative;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     height: 500px;
 }
 
 .blob {
     position: absolute;
-    z-index: -1; 
+    z-index: -1;
     top: 20px;
     left: 5px;
     max-width: 400px;
@@ -89,16 +94,18 @@ body {
 
 #hero-img {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     max-width: 400px;
     width: 100%;
     height: 400px;
 }
 
+/* timline section */
+
 #timeline-container {
     margin-top: 100px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
 }
 
 .timeline-heading {
@@ -109,7 +116,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 #line {
@@ -162,12 +169,15 @@ body {
 .mt12 {
     margin-top: 1100px;
 }
+
 .mt13 {
     margin-top: 1200px;
 }
+
 .mt14 {
     margin-top: 1300px;
 }
+
 .mt15 {
     margin-top: 1400px;
 }
@@ -177,10 +187,10 @@ body {
 .default-style {
     position: absolute;
     display: inline-block;
-    width: 300px;
+    width: 350px;
     line-height: 15px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     transition: 0.5s linear;
     padding: 5px;
 }
@@ -192,17 +202,19 @@ body {
     backdrop-filter: blur(15px);
 }
 
-.year-left, .event-left {
+.year-left,
+.event-left {
     top: 10px;
-    right: 15px;   
+    right: 15px;
     text-align: right;
 }
 
-.event-right, .year-right {
+.event-right,
+.year-right {
     top: 10px;
     left: 15px;
     text-align: left;
-} 
+}
 
 .year-left::after {
     content: "";
@@ -225,6 +237,39 @@ body {
 }
 
 
+/* quote */
+
+#quote-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#quote-container h1 {
+    font-size: 4vw;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 50px;
+}
+
+.quotation-symbol {
+    font-size: 5vw;
+    color: #ff2c45;
+}
+
+
+#readMore-container {
+    text-align: center;
+    margin: 50px 0;
+}
+#readMore-btn {
+   text-decoration: none;
+   color: white;
+   background-color: #ff2c45;
+   padding: 15px 20px;
+   border-radius: 5px;
+}
+
 
 @media screen and (max-width: 769px) {
     #hero {
@@ -238,7 +283,7 @@ body {
     }
 
     #dynamic-text {
-        padding: 3px;    
+        padding: 3px;
     }
 
     .default-style {
@@ -254,12 +299,16 @@ body {
     .mt5 {
         margin-top: 385px;
     }
+
+    #quote-container h1 {
+        font-size: 5vw;
+    }
 }
 
 
 @media screen and (max-width: 400px) {
     .default-style {
-        font-size: 8px;
+        font-size: 10px;
         width: 150px;
     }
 
@@ -271,32 +320,3 @@ body {
         margin-top: 400px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
